@@ -38,7 +38,7 @@ export const practice: TopicPractice = {
       commandTerm: "Calculate",
       guideRef: "complex-cartesian-argand",
       question: "Calculate the exact modulus of {{z = (1 + 2i)(3 - i)}}.",
-      options: ["{{5sqrt(2)}}", "{{5}}", "{{50}}", "{{10}}"],
+      options: ["{{5sqrt(2)}}", "{{2sqrt(5)}}", "{{5sqrt(3)}}", "{{3sqrt(5)}}"],
       answerIndex: 0,
       hints: [
         "Use the multiplicative modulus property {{|uv| = |u||v|}}.",
