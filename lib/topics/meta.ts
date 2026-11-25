@@ -23,6 +23,10 @@ export interface TopicMeta {
   title: string;
   strand: Strand;
   icon: string;
+  /** Which IB Diploma year normally finishes this topic (1 = DP1 / Year 12, 2 = DP2 / Year 13). */
+  dpYear: 1 | 2;
+  /** Teaching/revision order used when ?dp=2 is active (DP2 first, then DP1). */
+  dpOrder: number;
   level: IBLevel;
   curriculum: string;
   sections: SectionPlan[];
@@ -43,6 +47,8 @@ export const TOPIC_META: TopicMeta[] = [
     title: "Topic 1A: Sequences, Series, Exponents, Logs & Binomial",
     strand: "Topic 1: Number & Algebra",
     icon: "∑",
+    dpYear: 1,
+    dpOrder: 5,
     level: "SL",
     curriculum: "IB Maths AA FA2029 Brief — Topic 1 Core (SL 1.1–1.3, 1.5–1.9; AHL 1.10–1.11; FA2029 cut: financial apps excluded)",
     sections: [
@@ -77,6 +83,8 @@ export const TOPIC_META: TopicMeta[] = [
     title: "Topic 1B: Complex Numbers, Formal Proof & Linear Systems (HL)",
     strand: "Topic 1: Number & Algebra",
     icon: "ℂ",
+    dpYear: 2,
+    dpOrder: 1,
     level: "HL",
     curriculum: "IB Maths AA FA2029 Brief — Topic 1 HL (AHL 1.12–1.16; FA2029 cut: proof by counterexample excluded)",
     sections: [
@@ -113,6 +121,8 @@ export const TOPIC_META: TopicMeta[] = [
     title: "Topic 2: Functions, Quadratics, Rationals & Polynomials",
     strand: "Topic 2: Functions",
     icon: "ƒ",
+    dpYear: 1,
+    dpOrder: 6,
     level: "SL",
     curriculum: "IB Maths AA FA2029 Brief — Topic 2 (SL 2.1–2.11 & AHL 2.12–2.16)",
     sections: [
@@ -149,6 +159,8 @@ export const TOPIC_META: TopicMeta[] = [
     title: "Topic 3A: 3D Geometry, Circular Measure & Trigonometry",
     strand: "Topic 3: Geometry & Trigonometry",
     icon: "△",
+    dpYear: 1,
+    dpOrder: 7,
     level: "SL",
     curriculum: "IB Maths AA FA2029 Brief — Topic 3 Core & Trig Extensions (SL 3.1–3.8 & AHL 3.9–3.11)",
     sections: [
@@ -183,6 +195,8 @@ export const TOPIC_META: TopicMeta[] = [
     title: "Topic 3B: 3D Vectors, Lines & Planes (HL)",
     strand: "Topic 3: Geometry & Trigonometry",
     icon: "↗",
+    dpYear: 2,
+    dpOrder: 2,
     level: "HL",
     curriculum: "IB Maths AA FA2029 Brief — Topic 3 HL Vectors (AHL 3.12–3.18)",
     sections: [
@@ -219,6 +233,8 @@ export const TOPIC_META: TopicMeta[] = [
     title: "Topic 4: Descriptive Statistics, Probability & Distributions",
     strand: "Topic 4: Statistics & Probability",
     icon: "📊",
+    dpYear: 2,
+    dpOrder: 3,
     level: "SL",
     curriculum: "IB Maths AA FA2029 Brief — Topic 4 (SL 4.1–4.3, 4.5–4.9, 4.11–4.12 & AHL 4.13–4.14; FA2029 cut: bivariate correlation/regression excluded)",
     sections: [
@@ -255,6 +271,8 @@ export const TOPIC_META: TopicMeta[] = [
     title: "Topic 5A: Limits, Differentiation, Curve Sketching & Optimization",
     strand: "Topic 5: Calculus",
     icon: "d/dx",
+    dpYear: 1,
+    dpOrder: 8,
     level: "SL",
     curriculum: "IB Maths AA FA2029 Brief — Topic 5 Differentiation (SL 5.1–5.4, 5.6–5.9 & AHL 5.12–5.14)",
     sections: [
@@ -289,6 +307,8 @@ export const TOPIC_META: TopicMeta[] = [
     title: "Topic 5B: Integration, Volumes, Differential Equations & Maclaurin",
     strand: "Topic 5: Calculus",
     icon: "∫",
+    dpYear: 2,
+    dpOrder: 4,
     level: "SL",
     curriculum: "IB Maths AA FA2029 Brief — Topic 5 Integration, ODEs & Series (SL 5.5, 5.10–5.11 & AHL 5.15–5.17, 5.19; FA2029 cut: Euler's method excluded)",
     sections: [
